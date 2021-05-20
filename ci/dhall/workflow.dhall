@@ -16,6 +16,8 @@ let prettier = ./jobs/prettier.dhall
 
 let golangci-lint = ./jobs/golangci-lint.dhall
 
+let hadolint = ./jobs/hadolint.dhall
+
 in  GitHubActions.Workflow::{
     , name = "CI"
     , on = GitHubActions.On::{ push = Some GitHubActions.Push::{=} }
@@ -28,5 +30,6 @@ in  GitHubActions.Workflow::{
         , checkPipeline
         , prettier
         , golangci-lint
+        , hadolint
         }
     }

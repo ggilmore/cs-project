@@ -7,3 +7,4 @@ yarn 1.22.5
 just 0.8.3
 deno 1.7.0
 golang 1.16.4
+hadolint v2.1.0

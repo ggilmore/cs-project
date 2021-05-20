@@ -17,6 +17,7 @@ OTHER_PACKAGES=(
   "yarn"
   "deno"
   "golang"
+  "hadolint"
 )
 
 for package in "${OTHER_PACKAGES[@]}"; do
