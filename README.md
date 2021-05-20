@@ -1,5 +1,18 @@
 # Kickstart ![CI](https://github.com/ggilmore/kickstart/workflows/CI/badge.svg)
 
+@sourcegraph/distribution: Beyond the boilerplate below, I've added:
+
+1. Go scripts
+1. Go linters (and in CI)
+1. Hadolint Dockerfile linter
+1. A default Dockerfile for the "app" (look in `src/`)
+1. A script to build+push the Docker image (this will probably require modifications to tweak the username for the repo). See `just docker-build`
+1. A script to run the project via the Docker image (`just run`) - This will need to be tweaked when you add the compose file, etc.
+
+You should be able to get away without needing a bunch of tooling for the small amount of javascript needed for the TODO app. All I'm imagining is a basic form that has a javascript callback to insert a new row (with the form contents) in an HTML table.
+
+---
+
 Kickstart is my personal template repository that bootstaps:
 
 - The [`just` command runner](https://github.com/casey/just) from https://github.com/casey/just
