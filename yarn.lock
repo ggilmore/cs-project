@@ -29,6 +29,11 @@ chevrotain@4.1.1:
   dependencies:
     regexp-to-ast "0.3.5"
 
+prettier-plugin-go-template@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-go-template/-/prettier-plugin-go-template-0.0.10.tgz#0036c4455a24e89a896d6ce8df6c0099e2499048"
+  integrity sha512-TaHPqiMK/zfk+YhvKRf/1WZDgQ6ffnlxJZX5rwphqfxBOVEezZQtYistTB348MKrKnnwKpyXZWpMRo0/KCVB+A==
+
 prettier-plugin-toml@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/prettier-plugin-toml/-/prettier-plugin-toml-0.3.1.tgz#71b5291ef9c2a20865d2dfe1dbc24435bcb596b5"

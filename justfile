@@ -2,14 +2,21 @@ all: check format lint build
 
 build: render-ci-pipeline
 
+docker:
+docker-build: docker
+    ./src/build-docker.sh
+
+run: docker-run
+docker-run: docker-build
+    ./src/run-docker.sh
+
 render-ci-pipeline:
     ./scripts/render-ci-pipeline.sh
 
 fmt: format
+format: format-dhall prettier format-shfmt format-golang
 
-format: format-dhall prettier format-shfmt
-
-lint: lint-dhall shellcheck
+lint: lint-dhall shellcheck lint-docker
 
 check: check-dhall
 
@@ -30,6 +37,14 @@ shellcheck:
 
 format-shfmt:
     shfmt -w .
+
+gofmt: format-golang
+format-golang:
+    ./scripts/go-format.sh
+
+hadolint: lint-docker
+lint-docker:
+    ./scripts/hadolint.sh
 
 install:
     just install-asdf
